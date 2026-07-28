@@ -72,4 +72,14 @@ Understanding customer value goes beyond basic revenue totals. This project segm
 │   └── dashboard_preview.png
 └── README.md
 ```
+---
 
+## 📈 Business Impact Framing
+
+| Segment Group | Revenue Share | Recommended Action |
+|---|---|---|
+| Champions | 34.7% | Retain & reward — loyalty programs, early access |
+| Loyal / Potential Loyalists | 22.23% | Upsell & nurture — targeted cross-sell campaigns |
+| About To Sleep / At Risk / Lost | 43.08% | Win-back campaigns — discounts, re-engagement emails |
+
+---
