@@ -34,11 +34,14 @@ DROP TABLE IF EXISTS customer_rfm_summary;
 CREATE TABLE customer_rfm_summary AS
 SELECT 
     CustomerID,
-    DATEDIFF('2011-12-10', MAX(InvoiceDateTime)) AS recency, -- Days since last purchase
+    DATEDIFF(
+    (SELECT DATE_ADD(MAX(InvoiceDateTime), INTERVAL 1 DAY) FROM staged_transactions),
+    MAX(InvoiceDateTime)) AS recency, 						-- Days since last purchase
     COUNT(DISTINCT InvoiceNo) AS frequency,                 -- Total unique shopping trips
     ROUND(SUM(TotalRevenue), 2) AS monetary                  -- Total net spend
 FROM staged_transactions
 GROUP BY CustomerID;
+
 
 -- Check the quality of rows 
 SELECT * FROM customer_rfm_summary LIMIT 5;
