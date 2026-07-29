@@ -15,7 +15,7 @@ Understanding customer value goes beyond basic revenue totals. This project segm
 
 > **"Where is our revenue coming from today, and how much of it is at risk of churning?"**
 
-**Dataset used:** [Online Retail II](https://www.kaggle.com/datasets/vijayuv/onlineretail) — UK-based online retail transactions.
+**Dataset used:** [Online Retail](https://www.kaggle.com/datasets/vijayuv/onlineretail) — UK-based online retail transactions.
 
 ---
 
@@ -65,6 +65,7 @@ Understanding customer value goes beyond basic revenue totals. This project segm
 
 ```
 ├── sql/
+    ├── data_ingestion_staging.sql
 │   └── rfm_segmentation.sql        
 ├── dashboard/
 │   └── RFM_Customer_Segmentation.pbix
